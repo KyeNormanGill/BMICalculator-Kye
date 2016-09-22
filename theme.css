@@ -1,0 +1,20 @@
+*{
+	font-family: 'Hammersmith One', sans-serif;
+}
+#BMITitle{
+	width:100%;
+	text-align:center;
+}
+input[type=radio]{
+	margin: auto;
+}
+.container{
+	background-color:gray;
+	padding-bottom:15px;
+	border-radius:0 0 10px 10px;
+}
+.info{
+	background-color:white;
+	padding-top:10px;
+	border-radius:10px;
+}
