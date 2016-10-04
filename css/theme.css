@@ -5,6 +5,11 @@
 	width:100%;
 	text-align:center;
 }
+#border{
+	border: solid 1px;
+	border-radius:10px;
+	margin-bottom:15px;
+}
 input[type=radio]{
 	margin: auto;
 }

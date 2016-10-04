@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet">
-		<link href="theme.css" rel="stylesheet">
+		<link href="css/theme.css" rel="stylesheet">
   </head>
   
   <body>
@@ -15,46 +15,41 @@
 		<div id="BMITitle">
 			<h1>Body Mass Index Calculator</h1>
 		</div>
+		<div id="border">
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+		</div>
 		<form>
-			<div class="form-group col-md-6">
-				<img class="center-block" src="imgs/male.png" height="200px" alt="Male">
-				<input class="center-block" type="radio" value="male" name="gender">
-			</div>
-			<div class="form-group col-md-6">
-				<img class="center-block" src="imgs/woman.png" height="200px" alt="Female">
-				<input class="center-block" type="radio" value="female" name="gender">
-			</div>
 			<div class="form-group col-md-4">
 				<input id="_height" type="text" placeholder="Height.." class="form-control">
 			</div>
 			<div class="dropdown col-md-2">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Measurement...<span class="caret"></span></button>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					<li><a href="#">Centimeters</a></li>
-					<li><a href="#">Metres</a></li>
-					<li><a href="#">Foot</a></li>
-				</ul>
+				<select class="form-control">
+					<option value="meter">Meters</option>
+					<option value="centimeter">Centimeters</option>
+					<option value="foot">Foot</option>
+				</select>
 			</div>
 			<div class="form-group col-md-4">
 				<input  id="_weight" type="text" placeholder="Weight.." class="form-control">
 			</div>
 			<div class="dropdown col-md-2">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Measurement...<span class="caret"></span></button>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-					<li><a href="#">Kilograms</a></li>
-					<li><a href="#">Pounds</a></li>
-				</ul>
+				<select class="form-control">
+					<option value="kilogram">Kilograms</option>
+					<option value="pound">Pounds</option>
+				</select>
 			</div>
-			<div class="form-group col-md-12">
-				<button class="btn btn-default center-block" id="calc">Calculate</button>
+			<div class="form-group col-md-12 text-xs-center">
+				<button class="btn btn-default" id="calc">Calculate</button>
 			</div>
 		</form>
 		<div class="info col-md-12">
 			<p>Author: Kye Norman-Gill<br />Created: Thursday, 22 September 2016</p>
 		</div>
 	</div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
 	<script src="js/app.js"></script>
+	
   </body>
 </html>
