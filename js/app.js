@@ -35,7 +35,7 @@ var calcBMIImperial = function(height, weight){
 	@returns metres
 */
 var centimetersToMeters = function(centimeters){
-	return centimeters/100;
+	return centimeters / 100;
 }
 
 /*
@@ -60,7 +60,7 @@ var poundsToKilograms = function(pounds){
 }
 
 /*
-	@desc Gets both values and calulcates bmi and sends an alert box with the result
+	@desc Gets both values and calulcates bmi below the calculate button with corresponding weight category
 */
 document.getElementById("calc").onclick = function() {
 
