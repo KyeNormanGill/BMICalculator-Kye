@@ -99,4 +99,25 @@ document.getElementById("calc").onclick = function() {
 	{
 		document.getElementById("result").innerHTML = (calcBMIImperial(height, weight));
 	}
+
+	if(document.getElementById("result").innerHTML <= 18.5)
+	{
+		document.getElementById("dynamicResponse").innerHTML = ("Underweight!");
+	}
+	else if(document.getElementById("result").innerHTML > 18.5 && document.getElementById("result").innerHTML <= 24.9)
+	{
+		document.getElementById("dynamicResponse").innerHTML = ("Normal or Healthy Weight");
+	}
+	else if(document.getElementById("result").innerHTML > 24.9 && document.getElementById("result").innerHTML <= 29.9)
+	{
+		document.getElementById("dynamicResponse").innerHTML = ("Overweight");
+	}
+	else if(document.getElementById("result").innerHTML > 29.9)
+	{
+		document.getElementById("dynamicResponse").innerHTML = ("Obese!");
+	}
+	else
+	{
+		document.getElementById("dynamicResponse").innerHTML = ("I don't know how you managed to get a negative number but you should get that checked out!");
+	}
 };
