@@ -77,26 +77,26 @@ document.getElementById("calc").onclick = function() {
 
 	if(weightOption == "kilogram" && heightOption == "inch")
 	{
-		alert(calcBMIMetric(inchesToMeters(height), weight));
+		document.getElementById("result").innerHTML = (calcBMIMetric(inchesToMeters(height), weight));
 	}
 	else if(weightOption == "pound" && heightOption == "meter")
 	{
-		alert(calcBMIMetric(height, poundsToKilograms(weight)));
+		document.getElementById("result").innerHTML = (calcBMIMetric(height, poundsToKilograms(weight)));
 	}
 	else if(weightOption == "pound" && heightOption == "centimeter")
 	{
-		alert(calcBMIMetric(centimetersToMeters(height), poundsToKilograms(weight)));
+		document.getElementById("result").innerHTML = (calcBMIMetric(centimetersToMeters(height), poundsToKilograms(weight)));
 	}
 	else if(weightOption == "kilogram" && heightOption == "meter")
 	{
-		alert(calcBMIMetric(height, weight));
+		document.getElementById("result").innerHTML = (calcBMIMetric(height, weight));
 	}
 	else if(weightOption == "kilogram" && heightOption == "centimeter")
 	{
-		alert(calcBMIMetric(centimetersToMeters(height), weight));
+		document.getElementById("result").innerHTML = (calcBMIMetric(centimetersToMeters(height), weight));
 	}
 	else if(weightOption == "pound" && heightOption == "inch")
 	{
-		alert(calcBMIImperial(height, weight));
+		document.getElementById("result").innerHTML = (calcBMIImperial(height, weight));
 	}
 };
