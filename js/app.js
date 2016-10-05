@@ -100,7 +100,7 @@ document.getElementById("calc").onclick = function() {
 		document.getElementById("result").innerHTML = (calcBMIImperial(height, weight));
 	}
 
-	if(document.getElementById("result").innerHTML <= 18.5)
+	if(document.getElementById("result").innerHTML <= 18.5 && document.getElementById("result").innerHTML > 0)
 	{
 		document.getElementById("dynamicResponse").innerHTML = ("Underweight!");
 	}
