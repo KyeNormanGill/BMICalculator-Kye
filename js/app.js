@@ -49,7 +49,6 @@ var inchesToMeters = function(inches)
 	return inches * 0.0254;
 }
 
-
 /*
 	@func inchesToMeters
 	@desc Converts inches to meters.
@@ -64,8 +63,40 @@ var poundsToKilograms = function(pounds){
 	@desc Gets both values and calulcates bmi and sends an alert box with the result
 */
 document.getElementById("calc").onclick = function() {
+
+	
+	var heightSelect = document.getElementById("height");
+	var heightOption = heightSelect.options[heightSelect.selectedIndex].value;
+
+	var weightSelect = document.getElementById("weight");
+	var weightOption = weightSelect.options[weightSelect.selectedIndex].value;
+
 	var weight = document.getElementById("_weight").value;
 	var height = document.getElementById("_height").value;
-	var result = calcBMIImperial(height, weight);
-	window.alert(result);
+
+
+	if(weightOption == "kilogram" && heightOption == "inch")
+	{
+		alert(calcBMIMetric(inchesToMeters(height), weight));
+	}
+	else if(weightOption == "pound" && heightOption == "meter")
+	{
+		alert(calcBMIMetric(height, poundsToKilograms(weight)));
+	}
+	else if(weightOption == "pound" && heightOption == "centimeter")
+	{
+		alert(calcBMIMetric(centimetersToMeters(height), poundsToKilograms(weight)));
+	}
+	else if(weightOption == "kilogram" && heightOption == "meter")
+	{
+		alert(calcBMIMetric(height, weight));
+	}
+	else if(weightOption == "kilogram" && heightOption == "centimeter")
+	{
+		alert(calcBMIMetric(centimetersToMeters(height), weight));
+	}
+	else if(weightOption == "pound" && heightOption == "inch")
+	{
+		alert(calcBMIImperial(height, weight));
+	}
 };
